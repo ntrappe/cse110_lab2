@@ -192,8 +192,12 @@
           <td>O(n)</td>
           <td>O(n)</td>
         </tr>
-      </table> <br/><hr>
+      </table> <br/>
     </section>
+
+    <svg width="1500" height="5">
+      <rect width="1500" height="5" style="fill:#30C886" />
+    </svg>
 
 
     <h2>Progamming Languages</h2>
@@ -254,9 +258,21 @@
       </details> <br/>
     </section>
 
+    <canvas id="myCanvas" width="1500" height="5"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      // Green line (looks same as svg)
+      context.beginPath();
+      context.fillStyle = "#30C886";
+      context.fillRect(0, 0, 10000, 5);   // xoffset, yoffset, width, height
+      context.stroke();
+    </script>
+
     <h2>Sorting Algorithms</h2>
     <section>
-      <iframe src="https://www.interviewcake.com/concept/java/selection-sort" title="Selection Sort"> 
+      <iframe src="https://www.interviewcake.com/sorting-algorithm-cheat-sheet" title="Selection Sort"> 
     </section>
   </main>
 
