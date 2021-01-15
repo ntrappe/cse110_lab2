@@ -11,20 +11,33 @@
     font-family: "ibm plex sans";
   }
 
+  code {
+    font-family: menlo;
+    color: rgb(58, 58, 58);
+    background-color: #f1f1f1;
+    padding: 2px;
+    font-size: 100%;
+  }
+
+  
   h1 {
-    color: #30C886;
+    color: #0d6342;
+    font-size: 30px;
   }
 
   h2 {
-    color: #DEEBF3;
+    color: #2B4674;
+    font-size: 24px;
   }
 
   h3 {
-    color: #2B4674;
+    color: #000000;
+    font-size: 18px;
   }
 
   h4 {
-    color: #000000;
+    color: #30C886;
+    font-size: 12px;
   }
 
   main {
@@ -32,40 +45,47 @@
     font-size: 14px;
   }
 
+  section {
+    padding: 15px;
+    font-size: 14px;
+  }
+
   table {
     font-family: ibm plex sans;
     border-collapse: collapse;
-    width: 70%;
+    width: 50%;
+    font-size: 14px;;
   }
 
   td, th {
-    border: 2px solid #ffffff;
+    border: 2px solid #eeeeee;
     text-align: left;
     padding: 10px;
   }
 
-  tr:nth-child(even) {
-    background-color: #DEEBF3;
-  }
+
 </style>
 
   
 <body> 
   <header>
-    <img src="header.png" alt="Header Image" style="width: 70%">
+    <img src="header.png" alt="Header Image" style="width: 90%">
   </header>
 
   <main>
-    <h2>HTML Table</h2>
+    <h1>HTML Table</h1>
 
-    <h3>Data Structures:</h3>
+    <h2>Data Structures:</h2> 
     <section>
-      <h4>&#128204 <b>BINARY SEARCH TREE</b></h4>
+      <h3>&#128204 <b><mark>BINARY SEARCH TREE</mark></b></h3>
       <b>Useful for:</b> <br/> Sorting data and everything, including rebalancing, can be done in O(log n). <br/><br/>
-      <b>Notes:</b> <br/> Generally use <i>unique</i> values (don't want duplicates).   <br/> <br/>
-      <b>Time Complexity:</b> <br/>
+      <b>Notes:</b> <br/> Generally use <i>unique</i> values (don't want duplicates).   <br/> <br/> 
 
       <table>
+        <colgroup>
+          <col span="1" style="background-color: #c5d7e2">
+        </colgroup>
+        <caption style="text-align:left"><b>Time Complexity:</b></caption>
         <tr>
           <th bgcolor=#2B4674> <font color="white">Operation</th>
           <th bgcolor=#2B4674> <font color="white">Average</th>
@@ -86,7 +106,138 @@
           <td>O(log n)</td>
           <td>O(n)</td>
         </tr>
-      </table>
+      </table> <br/><hr>
+
+      <h3>&#128204 <b><mark>ARRAYS</mark></b></h3>
+      <b>Useful for:</b> <br/> Storing and accessing sequential data, temporarily storing, as an IO buffer (when reading from a file), lookup table, and hack for multiple return values. <br/><br/>
+      <b>Notes:</b> <br/> Can implement a <em>dynamic array</em> from static ones by continuously allocating double the space once the array is full.   <br/> <br/> 
+
+      <table>
+        <colgroup>
+          <col span="1" style="background-color: #c5d7e2">
+        </colgroup>
+        <caption style="text-align:left"><b>Time Complexity:</b></caption>
+        <tr>
+          <th bgcolor=#2B4674> <font color="white">Operation</th>
+          <th bgcolor=#2B4674> <font color="white">Average</th>
+          <th bgcolor=#2B4674> <font color="white">Worst</th>
+        </tr>
+        <tr>
+          <td>Access</td>
+          <td>O(1)</td>
+          <td>O(1)</td>
+        </tr>
+        <tr>
+          <td>Append</td>
+          <td>---</td>
+          <td>O(1)</td>
+        </tr>
+        <tr>
+          <td>Insert</td>
+          <td>---</td>
+          <td>O(n)</td>
+        </tr>
+        <tr>
+          <td>Remove</td>
+          <td>---</td>
+          <td>O(n)</td>
+        </tr>
+        <tr>
+          <td>Search</td>
+          <td>O(n)</td>
+          <td>O(n)</td>
+        </tr>
+      </table> <br/><hr>
+
+      <h3>&#128204 <b><mark>LINKED-LISTS</mark></b></h3>
+      <b>Useful for:</b> <br/> Useful in lists, queues, and stacks. Often used for circular (round robin) or adjacency lists. <br/><br/>
+      <b>Notes:</b> <br/> Singly-linked will save up on space and it's simpler to implement but it can make it more difficult to access previous nodes. Doubly-linked takes up <strong>double</strong> the space since we have 2x the pointers but <strong>easier</strong> to traverse backwards. <br/> <br/> 
+
+      <table>
+        <colgroup>
+          <col span="1" style="background-color: #c5d7e2">
+        </colgroup>
+        <caption style="text-align:left"><b>Time Complexity:</b></caption>
+        <tr>
+          <th bgcolor=#2B4674> <font color="white">Operation</th>
+          <th bgcolor=#2B4674> <font color="white">Average</th>
+          <th bgcolor=#2B4674> <font color="white">Worst</th>
+        </tr>
+        <tr>
+          <td>Insert</td>
+          <td>O(1)</td>
+          <td>O(1)</td>
+        </tr>
+        <tr>
+          <td>Remove</td>
+          <td>O(n)</td>
+          <td>O(1)</td>
+        </tr>
+        <tr>
+          <td>Search</td>
+          <td>O(n)</td>
+          <td>O(n)</td>
+        </tr>
+      </table> <br/><hr>
+    </section>
+
+
+    <h2>Progamming Languages</h2>
+    <section>
+      (1) C: Procedural-oriented language; no references (just pointers), no function overloading, + memory management. <br/> <br/>
+      <details>
+        <summary><b>Basic Example:</b></summary>
+        <code>#<font color="crimson">include</font> <font color="MidnightBlue">&ltstdio.h&gt</font> <br/>
+          <font color="crimson">int</font> <font color="SteelBlue">main()</font> <br/>
+          &nbsp;  <font color="SteelBlue">printf</font>(<font color="MidnightBlue">"Hello World!"</font>); <br/>
+          &nbsp; <font color="crimson">return</font> <font color="SteelBlue">0</font>; <br/>
+          }
+        </code>
+      </details> <br/>
+      <details>
+        <summary><b>To Run:</b></summary>
+        <pre>gcc -o hi Helloworld.c</pre><pre>hi</pre>
+      </details> <br/>
+      (2) C++: Object-oriented language; references, pointers, function overloading + memory management. <br/> <br/>
+      <details>
+        <summary><b>Basic Example:</b></summary>
+        <code>#<font color="crimson">include</font> <font color="MidnightBlue">&ltstdio.h&gt</font> <br/>
+          <font color="crimson">int</font> <font color="SteelBlue">main()</font> <br/>
+          &nbsp; cout &lt&lt <font color="MidnightBlue">"Hello World!</font> &lt&lt endl; <br/>
+          &nbsp; <font color="crimson">return</font> <font color="SteelBlue">0</font>; <br/>
+          }
+        </code>
+      </details> <br/>
+      <details>
+        <summary><b>To Run:</b></summary>
+        <pre>g++ -o hi Helloworld.c</pre><pre>./hi</pre>
+      </details> <br/>
+      (3) Python: Object-oriented/scripting language; pointers, function overloading + automatic garbage collection.<br/> <br/>
+      <details>
+        <summary><b>Basic Example:</b></summary>
+        <code><font color="crimson">def</font> <font color="SteelBlue">hello</font>(): <br/>
+          &nbsp; <font color="SteelBlue">print</font>(<font color="MidnightBlue">"Hello World!</font>)<br/>
+          <font color="SteelBlue">hello</font>()
+        </code>
+      </details> <br/>
+      <details>
+        <summary><b>To Run:</b></summary>
+        <pre>python Helloworld.py</pre>
+      </details> <br/>
+      (4) Java: Object-oriented language; references, method overloading + automatic garbage collection. <br/> <br/>
+      <details>
+        <summary><b>Basic Example:</b></summary>
+        <code><font color="crimson">public class</font> <font color="SteelBlue">HelloWorld</font> { <br/>
+          &nbsp; <font color="crimson">public static void</font> <font color="SteelBlue">main</font>(<font color="crimson">String</font>[]<font color="crimson">args</font>) {<br/>
+          &nbsp; &nbsp; System.out.println(<font color="MidnightBlue">"Hello World!"</font>); <br/>
+          &nbsp; } <br/>
+        }
+        </code>
+      </details> <br/>
+      <details>
+        <summary><b>To Run:</b></summary>
+        <pre>javac Helloworld.java</pre> <pre>java Helloworld</pre>
+      </details> <br/>
     </section>
   </main>
 
