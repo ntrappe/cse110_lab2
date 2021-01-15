@@ -19,6 +19,14 @@
     font-size: 100%;
   }
 
+  button {
+    font-family: ibm plex sans;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #30C886;
+    padding: 5px;
+  }
+
   
   h1 {
     color: #0d6342;
@@ -69,7 +77,10 @@
   
 <body> 
   <header>
-    <img src="header.png" alt="Header Image" style="width: 90%">
+    <picture>
+      <source srcset="header.png">
+      <img src="header.png" alt="Header Image" style="width: 100%">
+    </picture>
   </header>
 
   <main>
@@ -106,7 +117,10 @@
           <td>O(log n)</td>
           <td>O(n)</td>
         </tr>
-      </table> <br/><hr>
+      </table> <br/>
+      <form action="https://github.com/ntrappe/Data_Structures/blob/main/BST.cpp">
+        <button type="button"> CLICK TO SEE CODE </button>
+      </form> <br/><hr>
 
       <h3>&#128204 <b><mark>ARRAYS</mark></b></h3>
       <b>Useful for:</b> <br/> Storing and accessing sequential data, temporarily storing, as an IO buffer (when reading from a file), lookup table, and hack for multiple return values. <br/><br/>
@@ -178,8 +192,12 @@
           <td>O(n)</td>
           <td>O(n)</td>
         </tr>
-      </table> <br/><hr>
+      </table> <br/>
     </section>
+
+    <svg width="1500" height="5">
+      <rect width="1500" height="5" style="fill:#30C886" />
+    </svg>
 
 
     <h2>Progamming Languages</h2>
@@ -239,10 +257,27 @@
         <pre>javac Helloworld.java</pre> <pre>java Helloworld</pre>
       </details> <br/>
     </section>
+
+    <canvas id="myCanvas" width="1500" height="5"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      // Green line (looks same as svg)
+      context.beginPath();
+      context.fillStyle = "#30C886";
+      context.fillRect(0, 0, 10000, 5);   // xoffset, yoffset, width, height
+      context.stroke();
+    </script>
+
+    <h2>Sorting Algorithms</h2>
+    <section>
+      <iframe src="https://www.interviewcake.com/sorting-algorithm-cheat-sheet" title="Selection Sort"> 
+    </section>
   </main>
 
   <footer>
-    <img src="footer.jpg" alt="Footer Image" style="width: 100%">
+    <img src="footer.jpeg" alt="Footer Image" style="width: 100%">
   </footer>
 
 </body>
