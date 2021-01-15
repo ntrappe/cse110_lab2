@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSE Interview Prep</title>
+  <meta name="description" content="CSE Interview Prep">
+  <meta name="keywords" content="HTML,CSE110,UCSD">
+  <meta name="author" content="Nicole Trappe">
+</head>
+<style>
+  body {
+    font-family: "ibm plex sans";
+    padding: 20px;
+  }
+
+  button {
+    font-family: ibm plex sans;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #30C886;
+    padding: 5px;
+  }
+
+  legend {
+    font-family: ibm plex sans;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #2B4674;
+    padding: 5px;
+  }
+
+  h1 {
+    color: #0d6342;
+    font-size: 30px;
+  }
+
+  h2 {
+    color: #2B4674;
+    font-size: 24px;
+  }
+
+  h3 {
+    color: #000000;
+    font-size: 18px;
+  }
+
+  h4 {
+    color: #30C886;
+    font-size: 12px;
+  }
+
+  main {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+
+
+
+</style>
+
+<body>
+<form id="survey-form" action="/my-handling-form-page" method="post">
+  <h1 id="title">Computer Science Survey</h1>
+  <p id="description"><b>Note:</b> This took a long ass time to make.</p>
+  
+  <!-- ------------------Personal Details---------------------------- -->
+  <fieldset>
+    <!-- groups of widgets that share the same purpose, for styling and semantic purposes -->
+    <legend>Progamming Languages</legend>
+    <!-- formally describes the purpose of the fieldset it is included inside. -->
+    <div>
+      <label id="name-label" for="name">Name:</label>
+      <input type="text" required id="name" name="user_name" placeholder="Enter name here">  </div> <br/>
+
+    <!-- ------------------Radio Buttons-------------------------------- -->
+    <div>
+      <label for="Gender">What is your current year in CSE?</label>
+      <p>
+        <input type="radio" name="year" value="1"> Freshmen<br>
+        <input type="radio" name="year" value="2"> Sophmore<br>
+        <input type="radio" name="year" value="3"> Junior<br>
+        <input type="radio" name="year" value="4"checked> Senior<br>
+        <input type="radio" name="year" value="5"> Super Senior<br>
+      </p>
+    </div>
+    <label for="date-label">Date of Proposed Outing:</label>
+    <input type="date" name="bday">
+  
+  </fieldset> <br/>
+  <!-- ------------------Checkboxes-------------------------------- -->
+  <fieldset>
+    <label for="Exp">Which languages are you most familiar with? Check all that apply.</label>
+    <p>
+      <input type="checkbox" name="c/c++" value="c/c++"> C/C++<br>
+      <input type="checkbox" name="java" value="java"> Java/Ruby<br>
+      <input type="checkbox" name="python" value="python"> Python<br>
+      <input type="checkbox" name="html" value="html" checked> HTML/CSS<br>
+      <input type="checkbox" name="react" value="react" checked> React/Node<br>
+      <input type="checkbox" name="arm" value="arm" checked> ARM Assembly<br>
+      <input type="checkbox" name="javascript" value="javascript" checked> Javascript<br>
+      <input type="checkbox" name="sql" value="sql" checked> SQL/PHP<br>
+    </p>
+  </fieldset> <br/>
+  
+  <!-- -----------------Dropdown menus--------------------------------- -->
+  
+  <fieldset>
+    <div>
+      <label for="politics">Political Persuasion:</label>
+      <select id="dropdown">
+  <option value="left">Left Wing</option>
+  <option value="right">Right Wing</option>
+  <option value="conservative">Conservative</option>
+  <option value="nazi">Nazi</option>
+  </select>
+
+      <label for="politics">Education Level Completed:</label>
+      <select id="dropdown2">
+  <option value="University">University</option>
+  <option value="College">College</option>
+  <option value="Secondary">High School</option>  
+  <option value="None">None</option>
+  </select>
+    </div>
+  </fieldset> <br/>
+
+  <!-- --------------------Text Areas------------------------------ -->
+  
+  <fieldset>
+    <legend>Essay Section</legend>
+    <div>
+      <label for="msg"></label>
+      <p> In 50 words or more explain why you want to date my daughter</p>
+      <textarea id="msg" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>   </div>
+    <div>
+      <label for="msg">Please upload contact details for 2 references</label><br>
+      <textarea id="msg2" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>   </div>
+    <p>Upload Police Clearance Certificate, Bank Statement and Medical Certifiates here:
+      <button>Attach Files</button></p>
+  </fieldset>
+
+  <div id="submitbutton">
+    <button type="submit" id="submit">Send your application</button>   </div>
+
+</form>
+
+</body>
+</html>

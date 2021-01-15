@@ -72,6 +72,7 @@
   }
 
 
+
 </style>
 
   
@@ -256,7 +257,34 @@
         <summary><b>To Run:</b></summary>
         <pre>javac Helloworld.java</pre> <pre>java Helloworld</pre>
       </details> <br/>
+      (5)<strong> TODO</strong>:
+      <label for="language">Which programming language do you prefer?</label>
+      <input list="languages" name="language" id="language">
+      <datalist id="languages">
+        <option value="C">
+        <option value="C++">
+        <option value="Python">
+        <option value="Java">
+        <option value="HTML">
+        <option value="CSS">
+        <option value="ARM">
+        <option value="Javascript">
+      </datalist>  <br/> <br/>
+      (6)<strong> TODO</strong>:
+      <label for="language">Which programming language do you learn <em>first</em>?</label>
+      <select name="language" id="language">
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+      </select> <br/> <br/>
+      (7)<strong> TODO</strong>:
+      <label for="language">If (6) didn't list the language you learned first, what was it?</label> <br/>
+      <textarea id="language" name="language" rows="2" cols="60"> 
+      Please type in the language here.
+      </textarea> 
     </section>
+
 
     <canvas id="myCanvas" width="1500" height="5"></canvas>
     <script>
