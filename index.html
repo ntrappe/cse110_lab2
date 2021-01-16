@@ -6,9 +6,11 @@
   <meta name="keywords" content="HTML,CSE110,UCSD">
   <meta name="author" content="Nicole Trappe">
 </head>
+<!-- STYLE (LOTS OF CSS) -->
 <style>
-  body {
+  body { 
     font-family: "ibm plex sans";
+    padding: 10px;
   }
 
   code {
@@ -23,7 +25,13 @@
     font-family: ibm plex sans;
     font-weight: bold;
     color: #ffffff;
-    background-color: #30C886;
+    background-color: #2B4674;
+    padding: 5px;
+  }
+
+  nav {
+    background-color: #eeeeee;
+    color: #0d6342;
     padding: 5px;
   }
 
@@ -48,13 +56,10 @@
     font-size: 12px;
   }
 
-  main {
-    padding: 10px;
-    font-size: 14px;
-  }
+  main { font-size: 10px; }
 
   section {
-    padding: 15px;
+    padding: 10px;
     font-size: 14px;
   }
 
@@ -72,22 +77,39 @@
   }
 
 
+
 </style>
 
-  
+<!-- ACTUAL PAGE CONTENT-->
 <body> 
   <header>
-    <picture>
+    <picture> <!-- RESIZES TO FIT PAGE DYNAMICALLY -->
       <source srcset="header.png">
       <img src="header.png" alt="Header Image" style="width: 100%">
     </picture>
   </header>
 
-  <main>
-    <h1>HTML Table</h1>
+  <!-- SITE TITLE -->
+  <h1>CSE Interview Prep</h1>
 
-    <h2>Data Structures:</h2> 
-    <section>
+  <nav>
+    <h3>&nbsp; Table of Contents:</h3>
+    &nbsp; <a href="#DataStructures">Data Structures</a> <br/>
+    &nbsp; <a href="#ProgrammingLanguages">Programming Languages</a> <br/>
+    &nbsp; <a href="#SortingAlgorithms">Sorting Algorithms</a> <br/>
+    &nbsp; <a href="#MachineLearning">Machine Learning</a> <br/>
+    &nbsp; <a href="#Survey">Survey/HTML Form</a> <br/>
+    &nbsp; <a href="#Random">Random/Audio+Video</a> <br/><br/>
+  </nav> <br/>
+
+  <!-- THIS IS A GREEN LINE-->
+  <svg width="1500" height="5">
+    <rect width="1500" height="5" style="fill:#30C886" />
+  </svg>
+
+  <main>
+    <!-- SECTION ON DATA STRUCTURES -->
+    <section><h2><a name="DataStructures">Data Structures:</h2></a>
       <h3>&#128204 <b><mark>BINARY SEARCH TREE</mark></b></h3>
       <b>Useful for:</b> <br/> Sorting data and everything, including rebalancing, can be done in O(log n). <br/><br/>
       <b>Notes:</b> <br/> Generally use <i>unique</i> values (don't want duplicates).   <br/> <br/> 
@@ -118,8 +140,10 @@
           <td>O(n)</td>
         </tr>
       </table> <br/>
+     
+      <!-- button to go see code in github-->
       <form action="https://github.com/ntrappe/Data_Structures/blob/main/BST.cpp">
-        <button type="button"> CLICK TO SEE CODE </button>
+        <button type="submit"> CLICK TO SEE CODE</button>
       </form> <br/><hr>
 
       <h3>&#128204 <b><mark>ARRAYS</mark></b></h3>
@@ -195,69 +219,94 @@
       </table> <br/>
     </section>
 
+    <!-- THIS IS A GREEN LINE-->
     <svg width="1500" height="5">
       <rect width="1500" height="5" style="fill:#30C886" />
     </svg>
 
+    <!-- SECTION ON PROGRAMMING LANGS -->
+    <section><a name="ProgrammingLanguages"><h2>Progamming Languages</h2></a>
+    <ol>
+      <li> <strong>C</strong>: Procedural-oriented language; no references (just pointers), no function overloading, + memory management. <br/> <br/>
+        <details>
+          <summary><b>Basic Example:</b></summary>
+          <code>#<font color="crimson">include</font> <font color="MidnightBlue">&ltstdio.h&gt</font> <br/>
+            <font color="crimson">int</font> <font color="SteelBlue">main()</font> <br/>
+            &nbsp;  <font color="SteelBlue">printf</font>(<font color="MidnightBlue">"Hello World!"</font>); <br/>
+            &nbsp; <font color="crimson">return</font> <font color="SteelBlue">0</font>; <br/>
+            }
+          </code>
+        </details> <br/>
+        <details>
+          <summary><b>To Run:</b></summary>
+          <pre>gcc -o hi Helloworld.c</pre><pre>hi</pre>
+        </details> 
+      </li><br/>
 
-    <h2>Progamming Languages</h2>
-    <section>
-      (1) C: Procedural-oriented language; no references (just pointers), no function overloading, + memory management. <br/> <br/>
-      <details>
-        <summary><b>Basic Example:</b></summary>
-        <code>#<font color="crimson">include</font> <font color="MidnightBlue">&ltstdio.h&gt</font> <br/>
-          <font color="crimson">int</font> <font color="SteelBlue">main()</font> <br/>
-          &nbsp;  <font color="SteelBlue">printf</font>(<font color="MidnightBlue">"Hello World!"</font>); <br/>
-          &nbsp; <font color="crimson">return</font> <font color="SteelBlue">0</font>; <br/>
+      <li>(2) <strong>C++</strong>: Object-oriented language; references, pointers, function overloading + memory management. <br/> <br/>
+        <details>
+          <summary><b>Basic Example:</b></summary>
+          <code>#<font color="crimson">include</font> <font color="MidnightBlue">&ltstdio.h&gt</font> <br/>
+            <font color="crimson">int</font> <font color="SteelBlue">main()</font> <br/>
+            &nbsp; cout &lt&lt <font color="MidnightBlue">"Hello World!</font> &lt&lt endl; <br/>
+            &nbsp; <font color="crimson">return</font> <font color="SteelBlue">0</font>; <br/>
+            }
+          </code>
+        </details> <br/>
+        <details>
+          <summary><b>To Run:</b></summary>
+          <pre>g++ -o hi Helloworld.c</pre><pre>./hi</pre>
+        </details> 
+      </li><br/>
+
+      <li> <strong>Python</strong>: Object-oriented/scripting language; pointers, function overloading + automatic garbage collection.<br/> <br/>
+        <details>
+          <summary><b>Basic Example:</b></summary>
+          <code><font color="crimson">def</font> <font color="SteelBlue">hello</font>(): <br/>
+            &nbsp; <font color="SteelBlue">print</font>(<font color="MidnightBlue">"Hello World!</font>)<br/>
+            <font color="SteelBlue">hello</font>()
+          </code>
+        </details> <br/>
+        <details>
+          <summary><b>To Run:</b></summary>
+          <pre>python Helloworld.py</pre>
+        </details> 
+      </li> <br/>
+
+      <li> <strong>Java</strong>: Object-oriented language; references, method overloading + automatic garbage collection. <br/> <br/>
+        <details>
+          <summary><b>Basic Example:</b></summary>
+          <code><font color="crimson">public class</font> <font color="SteelBlue">HelloWorld</font> { <br/>
+            &nbsp; <font color="crimson">public static void</font> <font color="SteelBlue">main</font>(<font color="crimson">String</font>[]<font color="crimson">args</font>) {<br/>
+            &nbsp; &nbsp; System.out.println(<font color="MidnightBlue">"Hello World!"</font>); <br/>
+            &nbsp; } <br/>
           }
-        </code>
-      </details> <br/>
-      <details>
-        <summary><b>To Run:</b></summary>
-        <pre>gcc -o hi Helloworld.c</pre><pre>hi</pre>
-      </details> <br/>
-      (2) C++: Object-oriented language; references, pointers, function overloading + memory management. <br/> <br/>
-      <details>
-        <summary><b>Basic Example:</b></summary>
-        <code>#<font color="crimson">include</font> <font color="MidnightBlue">&ltstdio.h&gt</font> <br/>
-          <font color="crimson">int</font> <font color="SteelBlue">main()</font> <br/>
-          &nbsp; cout &lt&lt <font color="MidnightBlue">"Hello World!</font> &lt&lt endl; <br/>
-          &nbsp; <font color="crimson">return</font> <font color="SteelBlue">0</font>; <br/>
-          }
-        </code>
-      </details> <br/>
-      <details>
-        <summary><b>To Run:</b></summary>
-        <pre>g++ -o hi Helloworld.c</pre><pre>./hi</pre>
-      </details> <br/>
-      (3) Python: Object-oriented/scripting language; pointers, function overloading + automatic garbage collection.<br/> <br/>
-      <details>
-        <summary><b>Basic Example:</b></summary>
-        <code><font color="crimson">def</font> <font color="SteelBlue">hello</font>(): <br/>
-          &nbsp; <font color="SteelBlue">print</font>(<font color="MidnightBlue">"Hello World!</font>)<br/>
-          <font color="SteelBlue">hello</font>()
-        </code>
-      </details> <br/>
-      <details>
-        <summary><b>To Run:</b></summary>
-        <pre>python Helloworld.py</pre>
-      </details> <br/>
-      (4) Java: Object-oriented language; references, method overloading + automatic garbage collection. <br/> <br/>
-      <details>
-        <summary><b>Basic Example:</b></summary>
-        <code><font color="crimson">public class</font> <font color="SteelBlue">HelloWorld</font> { <br/>
-          &nbsp; <font color="crimson">public static void</font> <font color="SteelBlue">main</font>(<font color="crimson">String</font>[]<font color="crimson">args</font>) {<br/>
-          &nbsp; &nbsp; System.out.println(<font color="MidnightBlue">"Hello World!"</font>); <br/>
-          &nbsp; } <br/>
-        }
-        </code>
-      </details> <br/>
-      <details>
-        <summary><b>To Run:</b></summary>
-        <pre>javac Helloworld.java</pre> <pre>java Helloworld</pre>
-      </details> <br/>
+          </code>
+        </details> <br/>
+        <details>
+          <summary><b>To Run:</b></summary>
+          <pre>javac Helloworld.java</pre> <pre>java Helloworld</pre>
+        </details>
+      </li> <br/>
+
+      <li> <strong> TODO</strong>:
+        <label for="language">Which programming language do you prefer?</label>
+        <input list="languages" name="language" id="language">
+        <datalist id="languages">
+          <option value="C">
+          <option value="C++">
+          <option value="Python">
+          <option value="Java">
+          <option value="HTML">
+          <option value="CSS">
+          <option value="ARM">
+          <option value="Javascript">
+        </datalist> 
+      </li>
+    </ol>
     </section>
 
+    <!-- THIS IS A GREEN LINE -->
     <canvas id="myCanvas" width="1500" height="5"></canvas>
     <script>
       var canvas = document.getElementById('myCanvas');
@@ -270,12 +319,88 @@
       context.stroke();
     </script>
 
-    <h2>Sorting Algorithms</h2>
-    <section>
-      <iframe src="https://www.interviewcake.com/sorting-algorithm-cheat-sheet" title="Selection Sort"> 
+    <!-- SECTION ON SORTING ALGORITHMS -->
+    <section><a name="SortingAlgorithms"><h2>Sorting Algorithms</h2></a>
+      <iframe src="https://www.interviewcake.com/sorting-algorithm-cheat-sheet" height="400" width="800" title="Sorting Algos"></iframe> 
     </section>
+
+     <!-- THIS IS A GREEN LINE-->
+     <svg width="1500" height="5">
+      <rect width="1500" height="5" style="fill:#30C886" />
+    </svg>
+
+    <section><a name="MachineLearning"><h2>Machine Learning</h2></a>
+      <ul>
+        <li><b>LSTM</b>: an artificial recurrent neural network (RNN) for deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections and can process entire sequences of data (such as speech or video).</li>
+        <figure>
+          <img src="LSTM.png" alt="LSTM" style="width:70%">
+          <figcaption>Figure 1: Representation of LSTM with 4 Layers</figcaption>
+        </figure> 
+        <li><b>KNN</b>: An object is classified by a plurality vote of its neighbors, with the object being assigned to the class most common among its k nearest neighbors. If k = 1, then the object is simply assigned to the class of that single nearest neighbor.</li>
+        <figure>
+          <img src="KNN.png" alt="KNN" style="width:70%">
+          <figcaption>Figure 2: Representation of KNN with 3 Classes</figcaption>
+        </figure> 
+        <li><b>CNN</b>: Versions of multilayer perceptrons (MLPs). They are fully connected networks: each neuron in one layer is connected to all neurons in the next layer. The "fully-connectedness" of these networks makes them prone to overfitting data.</li>
+        <figure>
+          <img src="CNN.png" alt="CNN" style="width:70%">
+          <figcaption>Figure 3: Representation of CNN with 4 Features</figcaption>
+        </figure> 
+      </ul>
+      <aside>
+        <h3>Notes</h3>
+        If you're interested in ML and want to learn more about how <a href="https://github.com/ntrappe/ML-Models/blob/master/K-Means%20Tutorial(1).ipynb">KNNs</a>, CNNs, PCA, etc. work, then check out this <a href="https://github.com/ntrappe/ML-Models">GitHub Repo</a>.
+      </aside>
+    </section>
+
+     <!-- THIS IS A GREEN LINE-->
+     <svg width="1500" height="5">
+      <rect width="1500" height="5" style="fill:#30C886"/>
+    </svg>
+
+    <section><a name="Survey"><h2>Survey/HTML Form Example</h2></a>
+      <!-- TEMPLATE -->
+      <template>
+        https://github.com/ntrappe/cse110_lab2/blob/main/survey.html
+      </template>
+
+      <!-- EXPOSE TEMPLATE-->
+      <p>Click the button below to see the source of the above HTML survey (via template).</p>
+      <button onclick="showContent()">REVEAL LINK TO HTML SURVEY</button><br/><br/>
+      <script>
+        function showContent() {
+          var text = document.querySelector("template").innerHTML;
+          window.alert(text);
+        }
+      </script>
+
+      <object data="survey.html" width="800" height="600"></object>
+
+    </section>
+
+    <!-- THIS IS A GREEN LINE-->
+    <svg width="1500" height="5">
+      <rect width="1500" height="5" style="fill:#30C886"/>
+    </svg>
+
+    <!-- AUDIO AND VIDEO -->
+    <section><a name="Random"><h2>Random/Audio and Video</h2></a>
+      <p><h3>Video:</h3>If you've been enjoying the illustrations so far, check out this animation I just drew of my friend.</p>
+      <video width="400" height="400" controls>
+        <source src="santa_lights.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>  <br/>
+      
+      <p><h3>Audio:</h3>And here's some audio that fits the theme of the above animation.</p>
+      <audio controls>
+        <source src="Christmas.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+    </section>
+    <br/>
   </main>
 
+  
   <footer>
     <img src="footer.jpeg" alt="Footer Image" style="width: 100%">
   </footer>
