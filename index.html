@@ -193,26 +193,30 @@
         <colgroup>
           <col span="1" style="background-color: #c5d7e2">
         </colgroup>
-        <tr>
-          <th style="background-color: #2B4674" colspan="1"> <p style="color:white;">Operation</p></th>
-          <th style="background-color: #2B4674" colspan="1"> <p style="color:white;">Average</p></th>
-          <th style="background-color: #2B4674" colspan="1"> <p style="color:white;">Worst</p></th>
-        </tr>
-        <tr>
-          <td colspan="1">Insert</td>
-          <td colspan="1">O(1)</td>
-          <td colspan="1">O(1)</td>
-        </tr>
-        <tr>
-          <td colspan="1">Remove</td>
-          <td colspan="1">O(n)</td>
-          <td colspan="1">O(1)</td>
-        </tr>
-        <tr>
-          <td colspan="1">Search</td>
-          <td colspan="1">O(n)</td>
-          <td colspan="1">O(n)</td>
-        </tr>
+        <thead>
+          <tr>
+            <th style="background-color: #2B4674" colspan="1"> <p style="color:white;">Operation</p></th>
+            <th style="background-color: #2B4674" colspan="1"> <p style="color:white;">Average</p></th>
+            <th style="background-color: #2B4674" colspan="1"> <p style="color:white;">Worst</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="1">Insert</td>
+            <td colspan="1">O(1)</td>
+            <td colspan="1">O(1)</td>
+          </tr>
+          <tr>
+            <td colspan="1">Remove</td>
+            <td colspan="1">O(n)</td>
+            <td colspan="1">O(1)</td>
+          </tr>
+          <tr>
+            <td colspan="1">Search</td>
+            <td colspan="1">O(n)</td>
+            <td colspan="1">O(n)</td>
+          </tr>
+        </tbody>
       </table> <br/>
     </section>
 
@@ -325,30 +329,25 @@
     <section><a name="MachineLearning"><h2>Machine Learning</h2></a>
       <ul>
         <li><b>LSTM</b>: an artificial recurrent neural network (RNN) for deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections and can process entire sequences of data (such as speech or video).</li>
-        <li> <--- 
-          <ul class="inside">
-            <li><figure>
-              <img src="LSTM.png" alt="LSTM" style="width:70%">
-              <figcaption>Figure 1: Representation of LSTM with 4 Layers</figcaption>
-            </figure></li> 
-          </ul>
-      </li> <---
-      </ul>
-    
+      </ul>  
+      <figure>
+        <img src="LSTM.png" alt="LSTM" style="width:70%">
+        <figcaption>Figure 1: Representation of LSTM with 4 Layers</figcaption>
+      </figure> 
       <ul>
         <li><b>KNN</b>: An object is classified by a plurality vote of its neighbors, with the object being assigned to the class most common among its k nearest neighbors. If k = 1, then the object is simply assigned to the class of that single nearest neighbor.</li>
       </ul>
-        <figure>
-          <img src="KNN.png" alt="KNN" style="width:70%">
-          <figcaption>Figure 2: Representation of KNN with 3 Classes</figcaption>
-        </figure> 
+      <figure>
+        <img src="KNN.png" alt="KNN" style="width:70%">
+        <figcaption>Figure 2: Representation of KNN with 3 Classes</figcaption>
+      </figure> 
       <ul>
         <li><b>CNN</b>: Versions of multilayer perceptrons (MLPs). They are fully connected networks: each neuron in one layer is connected to all neurons in the next layer. The "fully-connectedness" of these networks makes them prone to overfitting data.</li>
       </ul>
-        <figure>
-          <img src="CNN.png" alt="CNN" style="width:70%">
-          <figcaption>Figure 3: Representation of CNN with 4 Features</figcaption>
-        </figure> 
+      <figure>
+        <img src="CNN.png" alt="CNN" style="width:70%">
+        <figcaption>Figure 3: Representation of CNN with 4 Features</figcaption>
+      </figure> 
       
       <aside>
         <h3>Notes</h3>
