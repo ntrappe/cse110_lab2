@@ -63,8 +63,18 @@
 <body>
 <form id="survey-form" action="/my-handling-form-page" method="post">
     <h1 id="title">Computer Science Survey</h1>
+    
     <p id="description"><b>Note:</b> This took a long ass time to make.</p>
+    <span>
+    I hope this survey <strong>SPAN</strong>s the test of time.
+    </span> <br/>
+    <div> 
+    If you didn't laugh at that joke then I hope this won't <strong>DIV<strong>ide us.
+    </div>
+    
+       
 
+    
     
       
   
@@ -131,16 +141,13 @@
     <fieldset> 
         <legend>CSE 110 GROUP LOGISTICS </legend> 
         <ul>
-            <span>
-                <li><label for="position">Would you like to be a team leader?</label>
-                <select id="position"></li>
+                <li><label for="position">Would you like to be a team leader?</label></li>
+                <select id="position">
                     <option value="yes">Yes! I want to be a leader.</option>
                     <option value="no">No, leadership sucks.</option>
                     <option value="undecided">Eh I don't care.</option>
-                </select>
-            </span> <br/> <br/>
-
-            <span>
+                </select> <br/> <br/>
+        
                 <li><label for="work">Which aspect of the project interests you more?</label>
                 <select id="work"></li>
                 <optgroup label="Front-End">
@@ -154,13 +161,10 @@
                 </optgroup>
                 <option value="full">Full-Stack (both)</option>  
                 <option value="none">None</option>
-                </select>
-            </span> <br/> <br/>
+                </select> <br/> <br/>
 
-            <span>
                 <li><label for="meeting-time">When do you have availability to meet on Thursday?</label>
                 <input id="meeting-time" type="time" name="meeting-time" value="13:30"></li>
-            </span>
         </ul>
     </fieldset> <br/>
   
