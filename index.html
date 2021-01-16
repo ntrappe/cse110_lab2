@@ -8,8 +8,9 @@
 </head>
 <!-- STYLE (LOTS OF CSS) -->
 <style>
-  body {
+  body { 
     font-family: "ibm plex sans";
+    padding: 10px;
   }
 
   code {
@@ -24,7 +25,13 @@
     font-family: ibm plex sans;
     font-weight: bold;
     color: #ffffff;
-    background-color: #888888;
+    background-color: #2B4674;
+    padding: 5px;
+  }
+
+  nav {
+    background-color: #eeeeee;
+    color: #0d6342;
     padding: 5px;
   }
 
@@ -49,13 +56,10 @@
     font-size: 12px;
   }
 
-  main {
-    padding: 10px;
-    font-size: 14px;
-  }
+  main { font-size: 10px; }
 
   section {
-    padding: 15px;
+    padding: 10px;
     font-size: 14px;
   }
 
@@ -85,12 +89,26 @@
     </picture>
   </header>
 
-  <main>
-    <!-- SITE TITLE -->
-    <h1>HTML Table</h1>
+  <!-- SITE TITLE -->
+  <h1>CSE Interview Prep</h1>
 
+  <nav>
+    <h3>&nbsp; Table of Contents:</h3>
+    &nbsp; <a href="#DataStructures">Data Structures</a> <br/>
+    &nbsp; <a href="#ProgrammingLanguages">Programming Languages</a> <br/>
+    &nbsp; <a href="#SortingAlgorithms">Sorting Algorithms</a> <br/>
+    &nbsp; <a href="#MachineLearning">Machine Learning</a> <br/>
+    &nbsp; <a href="#Survey">Survey</a> <br/><br/>
+  </nav> <br/>
+
+  <!-- THIS IS A GREEN LINE-->
+  <svg width="1500" height="5">
+    <rect width="1500" height="5" style="fill:#30C886" />
+  </svg>
+
+  <main>
     <!-- SECTION ON DATA STRUCTURES -->
-    <section><h2>Data Structures:</h2> 
+    <section><h2><a name="DataStructures">Data Structures:</h2></a>
       <h3>&#128204 <b><mark>BINARY SEARCH TREE</mark></b></h3>
       <b>Useful for:</b> <br/> Sorting data and everything, including rebalancing, can be done in O(log n). <br/><br/>
       <b>Notes:</b> <br/> Generally use <i>unique</i> values (don't want duplicates).   <br/> <br/> 
@@ -206,7 +224,7 @@
     </svg>
 
     <!-- SECTION ON PROGRAMMING LANGS -->
-    <section> <h2>Progamming Languages</h2>
+    <section><a name="ProgrammingLanguages"><h2>Progamming Languages</h2></a>
     <ol>
       <li> <strong>C</strong>: Procedural-oriented language; no references (just pointers), no function overloading, + memory management. <br/> <br/>
         <details>
@@ -300,7 +318,8 @@
       context.stroke();
     </script>
 
-    <section><h2>Sorting Algorithms</h2>
+    <!-- SECTION ON SORTING ALGORITHMS -->
+    <section><a name="SortingAlgorithms"><h2>Sorting Algorithms</h2></a>
       <iframe src="https://www.interviewcake.com/sorting-algorithm-cheat-sheet" height="400" width="800" title="Sorting Algos"></iframe> 
     </section>
 
@@ -309,7 +328,7 @@
       <rect width="1500" height="5" style="fill:#30C886" />
     </svg>
 
-    <section><h2>Machine Learning</h2>
+    <section><a name="MachineLearning"><h2>Machine Learning</h2></a>
       <ul>
         <li><b>LSTM</b>: an artificial recurrent neural network (RNN) for deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections and can process entire sequences of data (such as speech or video).</li>
         <figure>
@@ -335,14 +354,32 @@
 
      <!-- THIS IS A GREEN LINE-->
      <svg width="1500" height="5">
-      <rect width="1500" height="5" style="fill:#30C886" />
+      <rect width="1500" height="5" style="fill:#30C886"/>
     </svg>
 
+    <section><a name="Survey"><h2>Survey/HTML Form Example</h2></a>
+      <!-- TEMPLATE -->
+      <template>
+        https://github.com/ntrappe/cse110_lab2/blob/main/survey.html
+      </template>
+
+      <!-- EXPOSE TEMPLATE-->
+      <p>Click the button below to see the source of the above HTML survey (via template).</p>
+      <button onclick="showContent()">REVEAL LINK TO HTML SURVEY</button><br/><br/>
+      <script>
+        function showContent() {
+          var text = document.querySelector("template").innerHTML;
+          window.alert(text);
+        }
+      </script>
+
+      <object data="survey.html" width="800" height="600"></object>
+
+    </section>
 
   </main>
 
   
-
   <footer>
     <img src="footer.jpeg" alt="Footer Image" style="width: 100%">
   </footer>
