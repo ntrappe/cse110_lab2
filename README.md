@@ -1,5 +1,6 @@
 # cse110_lab2
 #### CSE 110 Lab 2: HTML, DevTools, and GitHub Pages P2
+##### Nicole Trappe #####
 
 Checkout out the [main HTML Page](index.html) which also references an [HTML form](survey.html). 
 
